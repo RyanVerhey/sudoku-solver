@@ -16,7 +16,7 @@ class Sudoku::Board
 
   def initialize(puzzle)
     tiles = puzzle.map { |value| Tile.new(value) }
-    @board = Matrix[tiles.each_slice(9).to_a]
+    @board = Matrix[*tiles.each_slice(9).to_a]
   end
 end
 
