@@ -5,6 +5,6 @@ class Sudoku::Solver
   end
 
   def solve
-    # solve the puzzle
+    # TODO: solve the puzzle
   end
 end
