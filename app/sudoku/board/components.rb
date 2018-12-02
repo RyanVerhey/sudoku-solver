@@ -2,11 +2,11 @@
 class Sudoku::Board::Component
 end
 
-class Sudoku::Board::Column < Board::Component
+class Sudoku::Board::Column < Sudoku::Board::Component
 end
 
-class Sudoku::Board::Row < Board::Component
+class Sudoku::Board::Row < Sudoku::Board::Component
 end
 
-class Sudoku::Board::Square < Board::Component
+class Sudoku::Board::Square < Sudoku::Board::Component
 end
