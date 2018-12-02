@@ -1,7 +1,10 @@
 # Handles behavior/state for tiles
 class Sudoku::Board::Tile
-  def initialize(value)
+  attr_reader :value
+
+  def initialize(value, board = nil)
     @value = value
+    @board = board
   end
 
   def value=(new_value)
