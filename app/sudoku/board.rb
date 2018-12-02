@@ -8,6 +8,14 @@ class Sudoku::Board
     @matrix = Matrix[*tiles.each_slice(9).to_a]
   end
 
+  def tiles
+    @matrix.to_a.flatten
+  end
+
+  def solved?
+    !tiles.any?(&:empty?)
+  end
+
   def get_tile(row, column)
     @matrix[row, column]
   end

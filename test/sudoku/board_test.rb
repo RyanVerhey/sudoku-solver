@@ -15,6 +15,23 @@ class Sudoku::BoardTest < MiniTest::Test
     @tile = @board.matrix[*@tile_index]
   end
 
+  class Tiles < Sudoku::BoardTest
+    def test_returns_all_of_the_boards_tiles
+      expected = @board.matrix.to_a.flatten
+
+      assert_equal expected, @board.tiles
+    end
+  end
+
+  class Solved < Sudoku::BoardTest
+    def test_returns_whether_the_board_is_solved
+      refute @board.solved?
+
+      solved_board = Sudoku::Board.new((1..81).to_a)
+      assert solved_board.solved?
+    end
+  end
+
   class GetTile < Sudoku::BoardTest
     def test_gets_tile_for_index
       assert_equal @tile, @board.get_tile(4, 1)
