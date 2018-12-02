@@ -1,2 +1,2 @@
-class Sudoku::BoardDisplayerTest < Minitest::Test
+class Sudoku::BoardDisplayerTest < MiniTest::Test
 end

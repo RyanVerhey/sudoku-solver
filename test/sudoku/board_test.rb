@@ -1,2 +1,2 @@
-class Sudoku::BoardTest < Minitest::Test
+class Sudoku::BoardTest < MiniTest::Test
 end
