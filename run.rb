@@ -1,8 +1,5 @@
 # Where the app will be run from
-require 'matrix'
-Dir["./app/*.rb"].each { |file| require file }
-Dir["./app/sudoku/*.rb"].each { |file| require file }
-Dir["./app/sudoku/board/*.rb"].each { |file| require file }
+require './requires.rb'
 
 # PUzzle Link: https://www.websudoku.com/?level=1&set_id=2959290249
 easy_sudoku_puzzle = [nil, nil, 6, 9, 8, 2, 4, 5, nil,
